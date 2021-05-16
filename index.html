@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="CSS/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Frontend Mentor | [Blogr]</title>
+</head>
+<body>
+  <div class="outer_nav_container">
+  <div class="logo_container">
+    <img id="logo" src="CSS/images/logo.svg" alt="logo">
+    <img class="open_menu" onclick="pullMenu(); resetSubLinks();" src="CSS/images/icon-hamburger.svg" alt="menu">
+  </div>
+    <div class="inner_nav_container">
+      <div class="nav">
+        <div class="icons">
+          <p onclick="renderProducts();">Product</p>
+            <img id="svg_1" class="svgImage" onclick="renderProducts();" src="CSS/images/icon-arrow-light.svg" alt="product">
+        </div>
+        <div class="links_container links_1">
+          <a class="link1" href="#">Overview</a>
+          <a class="link1" href="#">Pricing</a>
+          <a class="link1" href="#">Marketplace</a>
+          <a class="link1" href="#">Features</a>
+          <a class="link1" href="#">Integrations</a>
+        </div>
+      </div>
+      <div class="nav">
+      <div class="icons">
+        <p onclick="renderCompany();">Company</p>
+          <img id="svg_2" class="svgImage" onclick="renderCompany();" src="CSS/images/icon-arrow-light.svg" alt="company">
+      </div>
+      <div class="links_container links_2">
+        <a class="link2" href="#">About</a>
+        <a class="link2" href="#">Team</a>
+        <a class="link2" href="#">Blog</a>
+        <a class="link2" href="#">Careers</a>
+      </div>
+    </div>
+    <div class="nav">
+        <div class="icons">
+          <p onclick="renderConnect()">Connect</p>
+            <img id="svg_3" class="svgImage" onclick="renderConnect();" src="CSS/images/icon-arrow-light.svg" alt="connect">
+       </div>
+      <div class="links_container links_3">
+        <a class="link3" href="#">Contact</a>
+        <a class="link3" href="#">Newsletter</a>
+        <a class="link3" href="#">LinkedIn</a>
+      </div>
+    </div>
+  <div class="login_container">
+    <a class="login" href="#">Login</a>
+    <button class="signUp" type="button" name="button">Sign Up</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="heading_container">
+    <div class="heading_inner_container">
+       <h1>A modern publishing platform</h1>
+       <p>Grow your audience and build your online brand</p>
+    </div>
+    <div class="start_button_container">
+      <button id="startButton" class="signUp" type="button" name="button">Start for Free</button>
+      <button id="learnButton" class="signUp" type="button" name="button">Learn More</button>
+    </div>
+  </div>
+ <div class="designed_container">
+   <div class="top_container">
+     <h1 class="headingText">Designed for the future</h1>
+   </div>
+   <div class="bottom_container">
+     <div class="left_container">
+       <div class="intro">
+         <h2>Introducing an extensible editor</h2>
+         <p class="aboutText">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+         The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+         videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+         change the looks of a blog.</p>
+       </div>
+       <div class="intro">
+         <h2>Robust content management</h2>
+         <p class="aboutText">Robust content management
+         Flexible content management enables users to easily move through posts. Increase the usability of your blog
+         by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+       </div>
+     </div>
+     <div class="right_container">
+       <img src="CSS/images/illustration-editor-mobile.svg" alt="desktop">
+     </div>
+   </div>
+ </div>
+ <div class="mobile_images_container">
+   <div class="phones_container">
+     <img class="phones" src="CSS/images/illustration-phones.svg" alt="phones">
+   </div>
+   <div class="about_container">
+      <h1 id="whiteHeadings" class="headingText">State of The Art infrastructure</h1>
+      <p id="whiteAboutText" class="aboutText">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+      This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+   </div>
+ </div>
+ <div id="laptop_image" class="designed_container">   <!-- Reusing the above Designed section with some modifications -->
+   <!-- <div class="top_container">
+     <h1 class="headingText">Designed for the future</h1>
+   </div> -->
+   <div id="laptop_container" class="bottom_container">
+     <div id="laptop_intro" class="left_container">
+       <div class="intro">
+         <h2>Free, open, simple</h2>
+         <p class="aboutText">Blogr is a free and open source application backed by a large community of helpful developers. It supports
+         features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+         and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+       </div>
+       <div class="intro">
+         <h2>Powerful tooling</h2>
+         <p class="aboutText">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+         capable of producing even the most complicated sites.</p>
+       </div>
+     </div>
+     <div id="laptop_right_container" class="right_container">
+       <img src="CSS/images/illustration-laptop-mobile.svg" alt="desktop">
+     </div>
+   </div>
+ </div>
+ <div class="footer_container">
+   <div class="">
+     <img id="footer_logo" src="CSS/images/logo.svg" alt="logo">
+   </div>
+   <div class="">
+     <p>Product</p>
+     <a href="#">Overview</a>
+     <a href="#">Pricing</a>
+     <a href="#">Marketplace</a>
+     <a href="#">Features</a>
+     <a href="#">Integrations</a>
+   </div>
+   <div class="">
+     <p>Company</p>
+     <a href="#">About</a>
+     <a href="#">Team</a>
+     <a href="#">Blog</a>
+     <a href="#">Careers</a>
+   </div>
+   <div class="">
+     <p>Connect</p>
+     <a href="#">Contact</a>
+     <a href="#">Newsletter</a>
+     <a href="#">LinkedIn</a>
+   </div>
+ </div>
+ <div class="attribution">
+   <p>Challenge by - <span><a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+   Coded by - <span><a href="https://www.frontendmentor.io/profile/RahulKumarGautam1636">Rahul Kumar Gautam</a></span>.</p>
+ </div>
+<script>
+function pullMenu() {
+  $(".inner_nav_container").toggleClass("hide_menu");
+  $(".open_menu").attr("src", (_, attr)=> attr=="CSS/images/icon-close.svg"? "CSS/images/icon-hamburger.svg": "CSS/images/icon-close.svg");
+};
+var num = 0;
+var linkGroups = 3;
+  function renderProducts() {
+    num = 1;
+    renderItem();
+};
+  function renderCompany() {
+    num = 2;
+    renderItem();
+};
+  function renderConnect() {
+    num = 3;
+    renderItem();
+};
+function resetNavBar() {
+     if (num!==0 && $(".links_"+num).prop("classList").value.includes("show_menu")) {
+      pullMenu();
+  }
+}
+function resetSubLinks() {
+      if (num!==0 && $(".links_"+num).prop("classList").value.includes("show_menu")) {
+       renderItem();
+  }
+}
+function renderItem() {
+  for (var i=1; i<linkGroups+1; i++) {
+    if (i===num) {
+        $(".links_"+i).toggleClass("show_menu");
+        $(".link"+i).toggleClass("show_links");
+        $("#svg_"+i).toggleClass("invertSvg");
+    } else {
+       $(".links_"+i).removeClass("show_menu");
+       $(".link"+i).removeClass("show_links");
+       $("#svg_"+i).removeClass("invertSvg");
+    }
+  }
+}
+var x = window.matchMedia("(max-width: 950px)");
+myFunction(x);
+x.addListener(myFunction);
+function myFunction(x) {
+    if (!x.matches) {
+      $(".icons img").attr("src", "CSS/images/icon-arrow-light.svg");
+      resetNavBar();
+    } else {
+      $(".icons img").attr("src", "CSS/images/icon-arrow-dark.svg");
+      resetNavBar();
+    }
+}
+</script>
+</body>
+</html>
